@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dynamic Storefront - REST Client</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="navbar">
+    <h1>ModularStore</h1>
+    <div class="cart-status">
+      🛒 Cart: <span id="cart-count">0</span> items
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Feedback Notifications -->
+    <div id="error-banner" class="banner hidden"></div>
+
+    <!-- Filter & Controls Toolbar -->
+    <section class="toolbar">
+      <input
+        type="search"
+        id="search-input"
+        placeholder="Search products by title..."
+      />
+
+      <select id="sort-select">
+        <option value="default">Sort: Default</option>
+        <option value="price-asc">Price: Low to High</option>
+        <option value="price-desc">Price: High to Low</option>
+        <option value="rating-desc">Rating: High to Low</option>
+      </select>
+    </section>
+
+    <!-- Category Filter Tabs -->
+    <nav id="category-tabs" class="tabs-container">
+      <button class="tab-btn active" data-category="all">All</button>
+    </nav>
+
+    <!-- Products Grid -->
+    <section id="products-grid" class="products-grid">
+      <!-- Loading skeletons or dynamic product cards will be rendered here -->
+    </section>
+  </main>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
